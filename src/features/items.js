@@ -1,36 +1,22 @@
 import {createSlice} from '@reduxjs/toolkit';
 
+
 export const ItemcardSlice = createSlice({
   name: 'ItemCard',
-  initialState: {value: []},
+  initialState: {"value": []},
   reducers: {
-    addExpense: (state, action) => {
+    addData: (state, action) => {
+      // state.value = action.payload;
       state.value.push(action.payload);
     },
-
-    updateExpense: (state, action) => {
-      const index = state.value.findIndex(item => {
-        return item.id === action.payload.id;
-      });
-      console.log(index);
-      state.value[index] = action.payload;
-    },
-
-    deleteExpense: (state, action) => {
-      const index = state.value.findIndex(item => {
-        return item.id === action.payload.id;
-      });
-      state.value.splice(index, 1);
-      console.log(state.value);
-    },
-
-    loadData: (state, action) => {
-      state.value = action.payload;
-    },
+    deleteItem: (state, action) => {
+      const indexToDelete = action.payload;
+      state.value.splice(indexToDelete, 1);
+    }
   },
 });
 
-export const {addExpense, updateExpense, deleteExpense, loadData} =
+export const {addData, deleteItem} =
   ItemcardSlice.actions;
 
 export default ItemcardSlice.reducer;
