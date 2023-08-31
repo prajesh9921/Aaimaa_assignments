@@ -10,8 +10,10 @@ const Home = ({navigation}) => {
 
     const data = [
         { title: "Assignment 1", route: 'Assignment_1', status: true },
+        { title: "Assignment 5", route: 'Assignment_5', status: true },
         { title: "Assignment 4", route: 'Assignment_4', status: true },
         { title: "Assignment 7", route: 'Assignment_7', status: true },
+        { title: "Assignment 8", route: 'Assignment_8', status: true },
     ]
 
     const handleNavigate = (status, route) => {

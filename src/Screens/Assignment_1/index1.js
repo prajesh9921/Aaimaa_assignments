@@ -9,6 +9,7 @@ const storage = new MMKV()
 const MMKVstorage = () => {
 
     const [key, setKey] = useState("");
+    
     const [value, setValue] = useState("");
     const [searchKey, setSearchKey] = useState("");
     const [res, setRes] = useState("");
